@@ -9,9 +9,16 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+        caption {
+            background-color: chocolate;
+            padding: 10px;
+            color: white;
+        
+        }
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th {
             border: 1px solid black;
@@ -20,6 +27,16 @@
         thead, tfoot {
             background-color: rgb(88, 88, 88);
             color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top:-1px;
+            background-color: rgb(88, 88, 88)
+
+
+        }
+        tbody > tr:nth-child(2n) {
+            background-color: rgb(173, 173, 173);
         }
         td.numero {
             text-align: right;
@@ -38,10 +55,11 @@
             TR, TD, TH
     --> 
     <table>
+        <caption><strong>População ds Unidades Federativas</strong></caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px">População</th>
             </tr>
         </thead>
         <tbody>
@@ -57,10 +75,29 @@
                 <td>Rio Grande do Sul</td>
                 <td class="numero">39.155.248</td>
             </tr>
-
+            <tr>
+                <td>Rio Grande do Norte</td>
+                <td class="numero">39.155.248</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="numero">39.155.248</td>
+            </tr>            
+            <tr>
+                <td>Mato Grosso do Sul</td>
+                <td class="numero">39.155.248</td>
+            </tr>            
+            <tr>
+                <td>Maranhão</td>
+                <td class="numero">39.155.248</td>
+            </tr>
+            <tr>
+                <td>Santa Catarina</td>
+                <td class="numero">39.155.248</td>
+            </tr>            
         </tbody>
         <tfoot>
-            <th>Total de Habitantes</th>
+            <th scope="row">Total de Habitantes</th>
             <td class="numero"><strong>150.000.000</strong></td>
 
         </tfoot>
